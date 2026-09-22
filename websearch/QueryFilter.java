@@ -1,3 +1,5 @@
+package websearch;
+
 /**
  * Interface Strategy para filtragem de consultas na Web.
  */
