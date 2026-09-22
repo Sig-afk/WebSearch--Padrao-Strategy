@@ -1,18 +1,16 @@
+package websearch;
+
 import java.io.File;
 
-/**
- * Launch the web-search example
- */
 public class Main {
     public static void main(String[] args) {
-        // Source file (in the project's data/ folder)
-        File inputTextFile = new File("data/Hamlet.txt");
+        File file = new File("Hamlet.txt");
+        WebSearchModel model = new WebSearchModel(file);
 
-        // Build object graph
-        WebSearchModel model = new WebSearchModel(inputTextFile);
-        Snooper snoop = new Snooper(model);
+        // O Snooper se registra no modelo configurando os dois filtros
+        new Snooper(model);
 
-        // Execute
-        model.pretendToSearch();
+        // Executa a leitura e simulação
+        model.executeSearch();
     }
 }
